@@ -25,7 +25,7 @@
 // 7. Create a variable called num3 , assign the addition of num1 and num2 to it.
 // var num3 = num1 + num2
 // console.log(num3)
-// 8. Create a set of variables that define an animal (age, height, name, etc...). Must be atleast 6 variables.
+//8. Create a set of variables that define an animal (age, height, name, etc...). Must be atleast 6 variables.
 // var ani = 'whale';
 // var name = 'jimmmy';
 // var age =  18;
@@ -33,7 +33,7 @@
 // var wings = false;
 // var blowhole = true;
 
-// var sentence = `My animal is a ${ani}. His name is ${name}, and he is ${age}, and ${length} long`;
+//  var sentence = `My animal is a ${ani}. His name is ${name}, and he is ${age}, and ${length} long`;
 // console.log(sentence);
 
 //String Methods
@@ -74,12 +74,12 @@
         //console.log(fruits.substr(4, -5));na, peach, orange, a
 
     // .replace()
-        //Definiton: replace the first instance of a charecter
-        //  Allthough .replace is inefficent and you'd normally avoid it here's an example
-        //Examples
-       // var repeat = "microsoft"
-       // console.log(repeat.replace('i', 'a')); // macrosoft
-       // console.log(repeat.replace('soft', 'strong')); //microstrong
+    //     Definiton: replace the first instance of a charecter
+    //      Allthough .replace is inefficent and you'd normally avoid it here's an example
+    //     Examples
+    //    var repeat = "microsoft"
+    //    console.log(repeat.replace('i', 'a')); // macrosoft
+       console.log(repeat.replace('soft', 'strong')); //microstrong
   
         //.Splice()
 //   if(repeat.indexOf('o') > -1 ){
@@ -133,7 +133,16 @@
 
 // .tolowecase
 //will convert a string to all lowercase
+//Esacape Character:
 
+// var address = 'New York City\n706 Amersterdam Ave\n10001';
+// console.log(address);
+
+// .charAt()
+    // Will return a character based on its index
+    //Note: if the index is larger than thr last charcter index then we return an emprty string
+    // var townName = "Baylon"
+    // console.log(townName.charAt(0));
 
 
 // level 0
