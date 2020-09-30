@@ -1,0 +1,32 @@
+
+body {
+    color: red;
+}
+
+.Paragrapg1{
+    color: purple;
+}
+#Paragrapg2{
+    color: blue;
+}
+P{
+    color: orange;
+}
+
+.square{
+ /* the following are self-styles */
+height: 50px;
+width: 50px;
+background-color: rgb(244, 2, 211);
+padding: 20px;
+margin: 30px;
+border: 4px solid black;
+
+display: flex;
+justify-content: center;
+}
+.innerSquare{
+    height: 90%;
+    width: 90%;
+    background-color: rgb(63, 81, 135);
+}
