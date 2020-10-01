@@ -1,0 +1,24 @@
+.container{
+
+}
+.jumboTron{
+   height: 600px;
+    width: 100vw;
+   background-image:  url(https://content.halocdn.com/media/Default/community/page/API/api-hero_1920x675-e266d26f590d460c9d55aa7650ea2c2f.jpg);
+    background-size: cover;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column-reverse;
+}   
+.row{
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    text-align: center;
+  
+}
+.col{
+    border-image: 50px;
+    color: blue;
+}
