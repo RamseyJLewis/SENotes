@@ -1,6 +1,6 @@
-.container{
+/* .container{
 
-}
+} */
 .jumboTron{
    height: 600px;
     width: 100vw;
@@ -13,12 +13,22 @@
 }   
 .row{
     display: flex;
+    flex-direction: row;
     width: 100vw;
-    justify-content: space-around;
+    justify-content: space-around ;
     text-align: center;
   
 }
 .col{
     border-image: 50px;
-    color: blue;
+    color: rgb(62, 116, 208);
+}
+#midIMG{
+    justify-content: flex;
+    align-items: center;
+    text-align: inherit;
+}
+
+.games{
+    align-items: baseline;
 }
