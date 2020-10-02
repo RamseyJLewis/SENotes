@@ -1,6 +1,7 @@
-/* .container{
+.container{
+    font-family: Arial,sans-serif;
 
-} */
+} 
 .jumboTron{
    height: 600px;
     width: 100vw;
@@ -21,7 +22,7 @@
 }
 .col{
     border-image: 50px;
-    color: rgb(62, 116, 208);
+    color:  #155E93;
 }
 #midIMG{
     justify-content: flex;
@@ -32,3 +33,19 @@
 .games{
     align-items: baseline;
 }
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+  }
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav a:hover {
+    background-color:yellow ;
+    color: black;
+  }
