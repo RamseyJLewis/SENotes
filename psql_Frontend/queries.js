@@ -20,22 +20,22 @@ const getcars = ( request, response) => {
 const getcarsById = (request, response) =>{
     const id = parseInt (request.param.id);
 
-    const createCars = ( request, response) => {
-        const {make, model} = request.body;
-    }
+    pool.query('SELECT * FROM CARS WHERE id = $1', [id], (error,result) => {
+        if(error){
+            throw error
+        }
+        response.status(200).json(result.rows);
+    });
+}
+const createCars = ( request, response) => {
+    const {make, model} = request.body;
+
     pool.query('INSERT INTO cars (make, model) VALUES ($1,$2)  RETURNING *' [make, model], (error , results) => {
         if(error){
             throw error;
         }
         response.status(200).send(`cars added with names: ${make}, type: ${model}`)
     })
-
-    pool.query('SELECT * FROM CARS WHERE id = $1', [id], (error,result) => {
-    if(error){
-        throw error
-    }
-    response.status(200).json(result.rows);
-});
 }
 module.exports = {
     getcars,

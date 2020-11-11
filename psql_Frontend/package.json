@@ -4,7 +4,9 @@
   "description": "## TASKS * Create DB (Cars) * Create Tables (Make) (Model) (M.P.G) (TOP_MPH) * Add a few cars at least 4 * Write a selector to retrive info  * Write Javascript to dispaly info on page",
   "main": "cars.js",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "nodemon": "^2.0.6",
     "pg": "^8.5.0"
   },
   "devDependencies": {},
