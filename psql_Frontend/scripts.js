@@ -23,9 +23,16 @@ function getCars(){
     .then(res =>{
         res.forEach(cars => {
             let card = document.createElement('div');
+            let img = document.createElement('img')
+            
             card.innerText = cars.make
+        
+            img.setAttribute('src',`${cars.img}`)
             card.setAttribute('class', 'card')
             console.log(cars)
+           
+
+            card.appendChild(img)
             content.appendChild(card)
         });
     })

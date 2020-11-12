@@ -5,7 +5,6 @@ const app = express();
 const db = require('./queries');
 const port = 3000
 
-
 app.use(cors());
 app.use(bodyParser.json());
 app.use(
@@ -13,8 +12,6 @@ app.use(
         extneded: true,
     })
 );
-
-// CRUD - Add Get Edit Delete 
 
 app.get('/',(request,response) => {
     response.json({info: 'Node.js, express, and Postgres API'})

@@ -1,9 +1,29 @@
+body{
+    background-image: url('https://i.pinimg.com/originals/8d/f8/41/8df841aabda4d5360fc0873f4e462df5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover ;
+    height: 100%;
+    width: 100%;
+    
+}   
+
+
 .card{
-    height: 200px;
+    height: 400px;
     width: 300px;
-    border: 2px solid black;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+   
+    font-size: larger;
+    font-weight: bolder;
+    color:  #181818;
+}
 
+.card img{
+    height: 250px;
+    width: 400px;
+    padding: 2px;
 }
