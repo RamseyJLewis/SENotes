@@ -1,41 +1,64 @@
 let content = document.getElementById('content')
 
-function addCars(e){
+function createCars(e){
     let cars = {
-        make: document.getElementById('make'),
-        model: document.getElementById('model')
+        img: document.getElementById('img').value,
+        make: document.getElementById('make').value,
+        model: document.getElementById('model').value,
+        price: document.getElementById('price').value,
+        top_mph: document.getElementById('top_mph').value,
     }
-    fetch ('https://http://localhost:3000/cars',{
-        methods: 'POST',
+    fetch ('http://localhost:3000/cars',{
+        method: 'POST',
         headers: {
-            'Content-type': 'application/json'
+            'Content-Type': 'application/json'
         },
         body : JSON.stringify(cars)
     })
-    .then(res => console.log(res))
     .then(res => res.json())
+    .then( getCars)
     .catch(error => console.log(error))
 }
 function getCars(){
-    // container.innerHTML = '';
+    content.innerHTML = '';
     fetch('http://localhost:3000/cars', { method: 'GET'})
     .then(res => res.json())
     .then(res =>{
         res.forEach(cars => {
             let card = document.createElement('div');
             let img = document.createElement('img')
+            let deleteButton = document.createElement('button');
             
-            card.innerText = cars.make
+            card.innerText = cars.make + ' - ' +cars.model
         
             img.setAttribute('src',`${cars.img}`)
+            card.setAttribute('id', cars.id )
             card.setAttribute('class', 'card')
+            deleteButton.setAttribute('class','deleteButton')
+
+            deleteButton.onclick = (event) => deleteCarsById(event); 
+             deleteButton.innerText = `Delete: ${cars.make} - ${cars.model}`
             console.log(cars)
            
-
+            card.appendChild(deleteButton)
             card.appendChild(img)
             content.appendChild(card)
         });
     })
+    .catch(error => console.log(error))
+}
+
+
+function deleteCarsById(event){
+    console.log(event.target.parentNode.id);
+
+    fetch(`http://localhost:3000/cars/${event.target.parentNode.id}`,{
+        method : 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(getCars)
     .catch(error => console.log(error))
 }
 

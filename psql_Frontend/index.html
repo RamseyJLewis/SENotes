@@ -8,12 +8,15 @@
 </head>
 <body>
     <h1> CARS</h1>
-
-    <input id="Make" placeholder= "Make" value=""/>
-    <input id="Model" placeholder="Model" value=""/>
-    <button> Add Cars</button>
-
-    <button onclick=getCars()>Search</button>
+    <div class="searchArea">
+        <input id="img" placeholder= "img" value=""/>
+        <input id="make" placeholder= "make" value=""/>
+        <input id="model" placeholder="model" value=""/>
+        <input id="price" placeholder="price" value=""/>
+        <input id="top_mph" placeholder="top_mph" value=""/>
+        <button onclick=createCars()> Add Cars</button>
+        <button onclick=getCars()>Search</button>
+    </div>
     <div id=content> </div>
 
     <script src="scripts.js"> </script>
