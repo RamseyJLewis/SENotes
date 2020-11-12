@@ -1,0 +1,14 @@
+
+body{
+    color: black;
+    background-color: black !important;
+}
+
+
+canvas{
+    border-style: dashed;
+    border-width: 3px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-color: green;
+}
