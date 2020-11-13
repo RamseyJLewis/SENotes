@@ -21,6 +21,7 @@ app.get('/cars', db.getCars);
 app.get('/cars/:id', db.getCarsById); 
 app.post('/cars', db.createCars);
 app.delete('/cars/:id', db.deleteCarsById);
+app.put('/cars/:id', db.editCarsById);
 
 app.listen(port, () => {
     console.log(`APP running on port ${port} `)

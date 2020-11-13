@@ -18,9 +18,9 @@ const getCars = ( request, response) => {
     })
 }
 const getCarsById = (request, response) =>{
-    const id = parseInt (request.param.id);
+    const id = parseInt(request.params.id);
 
-    pool.query('SELECT * FROM CARS WHERE id = $1', [id], (error,results) => {
+    pool.query('SELECT * FROM cars WHERE id = $1', [id], (error,results) => {
         if(error){
             throw error
         }
@@ -49,9 +49,28 @@ const deleteCarsById = (request, response) =>{
         console.log(`cars id: ${id} was deleted `)
     });
 }
+
+const editCarsById = ( request, response) => {
+    const {img, make, model, price, top_mph} = request.body;
+    const id = parseInt (request.params.id);
+    pool.query(`
+    UPDATE cars SET img = $1, make= $2, model= $3, price= $4, top_mph =$5
+    WHERE id = $6
+    RETURNING *`,
+    [img, make, model,price,top_mph,id],
+    (error , results) => {
+        if(error){
+            throw error;
+        }
+        response.status(200).send(`people with id: ${id} update.`)
+    })
+}
+
 module.exports = {
     getCars,
     getCarsById,
     createCars,
-    deleteCarsById
+    deleteCarsById,
+    editCarsById
+
 }
