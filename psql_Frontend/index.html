@@ -7,15 +7,27 @@
     <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <h1> CARS</h1>
-
-    <input id="Make" placeholder= "Make" value=""/>
-    <input id="Model" placeholder="Model" value=""/>
-    <button> Add Cars</button>
-
-    <button onclick=getCars()>Search</button>
-    <div id=content> </div>
-
+    <h1>Cars Database</h1>
+    <div class="searchArea">
+     
+        <input id="img" placeholder= "img" value=""/>
+        <input id="make" placeholder= "make" value=""/>
+        <input id="model" placeholder="model" value=""/>
+        <input id="price" placeholder="price" value=""/>
+        <input id="top_mph" placeholder="top_mph" value=""/>
+        <button onclick=createCars()> Add Car</button>
+        </br>
+      
+        <input id="id" placeholder="ID" value=""/>
+        <button onclick=editCarsById()> Edit Car</button>
+        <br>
+        <button onclick=getCars()>Search</button>
+    </div>
+    <div id=content></div>
+    <div id='singleView'>
+        <button onclick=hidePopup(event)> X </button>
+    </div>
     <script src="scripts.js"> </script>
+
 </body>
 </html>
